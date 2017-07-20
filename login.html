@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!--视口宽度为设备宽度，不能缩放-->
+		<meta name="viewport" content="width=device-width,user-scalable=no">
+		<!--qq浏览器下强制横盘或者竖屏显示-->
+		<meta name="x5-orientation" content="portrait" />
+		<!--qq浏览器下是否可以全屏-->
+		<meta name="x5-fullscreen" content="true" />
+		<!--UC浏览器下强制横盘或者竖屏显示-->
+		<meta name="screen-orientation" content="portrait">
+		<!--UC浏览器下是否可以全屏-->
+		<meta name="full-screen" content="yes">
+		<!--是否禁止识别手机和邮箱-->
+		<meta name="format-detection" content="telephone=yes, email=no" />
+		<script src="js/jquery-1.6.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/myJS.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Cookie.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="icon" href="img/logo.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+		<title>登录</title>
+	</head>
+	<script>
+		    (function(){
+		    	var html = document.documentElement;
+		    	var hWidth = html.getBoundingClientRect().width;
+				html.style.fontSize = hWidth/15 + "px";
+		    })()
+		</script>
+	<body>
+		
+		<!--headerLogin start-->
+		<header class="headerLogin clearfix">
+			<a href="###" onclick="history.go(-1)"></a>
+			<span>登录</span>
+			<a href="###">忘记密码</a>
+		</header>
+		<!--headerLogin end-->
+		
+		
+		<!--loginBox start-->
+		<section class="loginBox">
+			<div class="userNameBox">
+				<span>蘑菇街账号</span>
+				<input id="userName" type="text" placeholder="输入用户名／邮箱／手机" maxlength="32" />
+			</div>
+			<div class="userPadBox">
+				<span>密码</span>
+				<input id="pwd" type="password" placeholder="输入密码" maxlength="32" />
+			</div>
+			<div class="loginBtn">
+				登录
+			</div>
+			<div class="loginMore">
+				<a href="###">免密登录</a>
+				<a href="regist.php">注册账号</a>
+			</div>
+			
+			<div class="qqLogin">
+				<img src="img/qq.png" alt="" />
+			</div>
+		</section>
+		<!--loginBox end-->
+		
+		
+	</body>
+	
+	
+	
+	
+	
+	<script type="text/javascript">
+		$(function(){
+			$(".loginBtn").click(function(){
+	
+				$.ajax({
+					type:"get",
+					async:true,
+					dataType:'text',
+					data:{"m":"index","a":"login","userName":$('#userName').val(),"password":$('#pwd').val()},
+					url:"index.php",
+					success:function(str){
+						str=JSON.parse(str);
+						console.log(str)
+						if(str.code==0){
+							window.location.href='index.html';
+						}
+					}
+				});
+				
+
+			});
+			
+	
+		});
+	</script>
+	
+</html>

@@ -1,0 +1,180 @@
+/*header start*/
+.header {
+  position: fixed;
+  border-bottom: 0.1rem solid #eeeeee;
+  z-index: 9999;
+}
+body {
+  background-color: #fff;
+}
+/*header end*/
+/*menu start*/
+.menu {
+  width: 3.6rem;
+  height: 22.88rem;
+  position: fixed;
+  left: 0;
+  top: 1.9rem;
+  background-color: #F6F6F6;
+  overflow: hidden;
+}
+.menu ul {
+  width: 3.6rem;
+  height: 22.88rem;
+  overflow: auto;
+}
+.menu ul li {
+  width: 3.6rem;
+  height: 1.8rem;
+  line-height: 1.8rem;
+  text-align: center;
+  font-size: 0.56rem;
+  color: #666;
+}
+.menu ul li.menuActive2 {
+  color: #FF5577;
+  background-color: #fff;
+}
+.menuActive:before {
+  content: "";
+  display: block;
+  float: left;
+  width: 0.2rem;
+  height: 0.6rem;
+  margin-top: 0.56rem;
+  background-color: #FF5577;
+  color: #FF5577;
+}
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+.menu ul::-webkit-scrollbar {
+  width: 0.12rem;
+  background-color: #F6F6F6;
+  display: none;
+}
+/*定义滚动条轨道 内阴影+圆角*/
+.menu ul::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #F6F6F6;
+}
+/*定义滑块 内阴影+圆角*/
+.menu ul::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #c5c5c5;
+}
+/*menu end*/
+/*content start*/
+.content {
+  width: 11.4rem;
+  height: auto;
+  background-color: #fff;
+  padding: 3rem 0 0 4rem;
+}
+/*productBox start*/
+.productBox ul li {
+  float: left;
+  width: 3.52rem;
+  height: 3.8rem;
+  margin: 0.1rem 0.12rem 0.1rem 0;
+}
+.productBox ul li img {
+  width: 2.6rem;
+  height: 2.6rem;
+  margin: 0 auto;
+}
+.productBox ul li span {
+  display: block;
+  font-size: 0.48rem;
+  color: #666666;
+  text-align: center;
+  line-height: 0.76rem;
+  margin: 0.2rem auto 0 auto;
+}
+/*productBox end*/
+/*productContent start*/
+.productContent {
+  clear: both;
+  margin-top: 0.6rem;
+}
+.productContentNav {
+  border-top: 0.02rem solid #eeeeee;
+  border-bottom: 0.02rem solid #eeeeee;
+  height: 1.56rem;
+  background-color: #fff;
+  z-index: 99999;
+  overflow: hidden;
+}
+.productContentNav a {
+  float: left;
+  display: block;
+  width: 3.64rem;
+  text-align: center;
+  font-size: 0.56rem;
+  height: 1.56rem;
+}
+.productContentNav span {
+  display: block;
+  width: 3.64rem;
+  border-left: 0.02rem solid #e6e6e6;
+  box-sizing: border-box;
+  margin-top: 0.4rem;
+  color: #666;
+}
+.productContentList li {
+  float: left;
+  width: 5.32rem;
+  height: 8.8rem;
+  background-color: #fff;
+  margin: 0.2rem 0.16rem 0 0;
+  position: relative;
+}
+.productContentImg img {
+  width: 5.32rem;
+  height: 6.88rem;
+  margin: 0 auto;
+}
+.productContentList li h4 {
+  line-height: 0.68rem;
+  max-height: 1.34rem;
+  font-size: 0.48rem;
+  color: #333;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 0.2rem;
+}
+.productContenBto P:nth-child(1) {
+  float: left;
+  margin: 0.2rem 0 0 0.3rem;
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #333;
+  overflow: hidden;
+  color: #FF5777;
+}
+.productContenBto P:nth-child(2) {
+  float: right;
+  height: 0.56rem;
+  line-height: 0.6rem;
+  margin: 0.3rem 0.3rem 0 0;
+  padding-right: 0.6rem;
+  background: url(../img/sp2.png) center right no-repeat;
+  background-size: auto 0.48rem;
+  font-size: 0.48rem;
+  color: #999;
+  overflow: hidden;
+}
+.sale {
+  width: 3.08rem;
+  height: 1rem;
+  line-height: 1rem;
+  background: url(../img/bg.png) no-repeat;
+  position: absolute;
+  font-size: 0.48rem;
+  color: #fff;
+  padding: 0 0 0 0.4rem;
+  left: 0;
+  bottom: 2.2rem;
+}
+/*productContent end*/
+/*content end*/

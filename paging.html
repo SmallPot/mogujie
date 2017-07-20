@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!--视口宽度为设备宽度，不能缩放-->
+		<meta name="viewport" content="width=device-width,user-scalable=no">
+		<!--qq浏览器下强制横盘或者竖屏显示-->
+		<meta name="x5-orientation" content="portrait" />
+		<!--qq浏览器下是否可以全屏-->
+		<meta name="x5-fullscreen" content="true" />
+		<!--UC浏览器下强制横盘或者竖屏显示-->
+		<meta name="screen-orientation" content="portrait">
+		<!--UC浏览器下是否可以全屏-->
+		<meta name="full-screen" content="yes">
+		<!--是否禁止识别手机和邮箱-->
+		<meta name="format-detection" content="telephone=yes, email=no" />
+		<script src="js/jquery-1.6.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/myJS.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Cookie.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="icon" href="img/logo.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/paging.css"/>
+		<title>全部商品分类</title>
+		<script>
+		    (function(){
+		    	var html = document.documentElement;
+		    	var hWidth = html.getBoundingClientRect().width;
+				html.style.fontSize = hWidth/15 + "px";
+		    })()
+		</script>
+	</head>
+	<body>
+		<!--header start-->
+		<header class="header clearfix">
+			<p class="login"><img src="img/section.png" alt="" /></p>
+			<div class="searchBox">
+				<span><img src="img/search.png" alt="" /></span>
+				<input type="text" name="" id="" value="" placeholder="v领短袖连衣裙" />
+			</div>
+			<p class=" shoppingCart"><img src="img/che.png"/></p>
+		</header>
+		<!--header end-->
+		
+		
+		<!--menu start-->
+		<section class="menu">
+			<ul>
+				
+			</ul>
+		</section>
+		
+		
+		<!--menu end-->
+		
+		
+		<!--content start-->
+		<section class="content">
+			<!--productBox start-->
+			<section class="productBox">
+				<ul class="clearfix">
+					
+					
+				</ul>
+			</section>
+			<!--productBox end-->
+			
+			
+			<!--productContent start-->
+			<section class="productContent">
+				
+				<nav class="productContentNav clearfix" id="productContentNav">
+					
+				</nav>
+				
+				
+				<ul class="productContentList"></ul>
+				
+				
+			</section>
+			<!--productContent end-->
+			
+			
+			
+			
+			
+		</section>
+		
+		
+		
+		
+		<!--content end-->
+		
+		
+		
+		<!--footer start-->
+		<section class="footer">
+			<ul class="footerList clearfix">
+				<li>
+					<a href="index.html"><img src="img/home.png"/></a>
+					<span class="footerListActive">首页</span>
+				</li>
+				<li>
+					<a href="###"><img src="img/fenlei.png"/></a>
+					<span>分类</span>
+				</li>
+				<li>
+					<a href="###"><img src="img/gouwuche.png"/></a>
+					<span>购物车</span>
+				</li>
+				<li>
+					<a href="###"><img src="img/my.png"/></a>
+					<span>我的</span>
+				</li>
+			</ul>
+		</section>
+		<!--footer end-->
+		
+		
+
+	</body>
+	
+	
+	
+	<script type="text/javascript">
+			//页面滚动导航固定
+			window.onload=
+			function(){
+			    var oDiv = document.getElementById("productContentNav"),
+			    H = 0,
+			    Y = oDiv;
+			    while (Y) {//求oDiv到body(html)的距离
+			    	H += Y.offsetTop;
+			    	Y = Y.offsetParent;
+			    }
+			    window.onscroll = function()//滚动时触发函数
+			    {
+			    	
+			        var s = document.body.scrollTop || document.documentElement.scrollTop;//被隐藏的高度
+			        if(s>H) {
+			            oDiv.style.position="fixed";
+			            oDiv.style.top="1.9rem";
+			        } else {
+			            oDiv.style.position="static";
+			        }
+			    }
+			}
+	</script>
+	
+	
+	
+	<script type="text/javascript">
+	
+	//http://mce.mogujie.com/jsonp/makeup/3?pid=41888&_=1498005171366&callback=jsonp2
+	//http://mce.mogucdn.com/jsonp/multiget/3?pids=41789%2C4604&callback=jsonp41789_4604
+	//正在流行    41888
+	
+		//menu
+		$(function(){
+			
+			
+			
+			$.ajax({
+				
+					type:"get",
+					async:true,
+					dataType:'jsonp',
+					jsonp:'callback',
+					data:{"pids":"41789"},
+					url:"http://mce.mogucdn.com/jsonp/multiget/3",
+					success:function(data){
+						//menu
+						var menuData=data.data[41789].list;
+						var fcid=null;
+						for(var i=0;i<menuData.length;i++){
+							$li=$('<li miniWallkey="'+menuData[i]["miniWallkey"]+'" maitKey="'+menuData[i]["maitKey"]+'">'+menuData[i]['title']+'</li>');
+							$('.menu ul').append($li);
+							
+							if(i==0){
+								$('.menu ul li').eq(i).attr("class","menuActive");
+								$('.menu ul li').eq(i).css({'color':'#FF5577','background':'#fff'});
+							}
+							
+							$('.menu ul li').eq(i).click(function(){
+								for(var j=0;j<$('.menu ul li').length;j++){
+									$('.menu ul li').eq(j).css({'color':'#666','background':'#F6F6F6'});
+									$('.menu ul li').eq(j).removeClass("menuActive")
+								}
+								var maitKey2=$(this).attr('maitKey');
+								var miniWallkey=$(this).attr('miniWallkey');
+								fcid=miniWallkey;
+								console.log('miniWallkey='+miniWallkey)
+								$(this).attr("class","menuActive");
+								$(this).css({'color':'#FF5577','background':'#fff'});
+								$(".productContentList").empty();
+								productBox(maitKey2);
+								productContent(miniWallkey,1,"pop");
+								
+								
+								$('.productContentNav a').click(function(){
+								    	
+								    var sorttype=$(this).attr("sort");
+								    $(".productContentList").empty();
+								    productContent(fcid,1,sorttype);
+						  	
+						    	});
+								 
+						  		  
+							});
+							
+							
+							
+							
+							
+							
+							
+						}
+						
+					}
+							
+							
+			});
+		});
+		
+		
+		
+		productBox(41888);
+		
+		function productBox(maitKey){
+			$.ajax({
+				
+					type:"get",
+					async:true,
+					dataType:'jsonp',
+					jsonp:'callback',
+					data:{"pid":maitKey},
+					url:"http://mce.mogujie.com/jsonp/makeup/3",
+					success:function(data){
+						$(".productBox ul").empty();
+						//productBox
+						var productBoxData=data.data.categoryNavigation.list;
+						for(var i=0;i<productBoxData.length;i++){
+							$li=$('<li><a href="'+productBoxData[i]["link"]+'"><img src="'+productBoxData[i]["image"]+'"/></a><span>'+productBoxData[i]["title"]+'</span></li>');
+							$('.productBox ul').append($li);
+							
+						}
+								
+					}
+							
+							
+			});
+		}
+		
+		
+		
+		
+		
+		
+			//productContent
+			 productContent(10062603,1,"pop");
+			
+			function productContent(miniWallkey,page,sorttype){
+
+				
+				var showProductContent=function(miniWallkey,pageNum,sorttype){
+					$.ajax({
+				
+						type:"get",
+						async:true,
+						dataType:'jsonp',
+						jsonp:'callback',
+						data:{"fcid":miniWallkey,"page":pageNum,"sorttype":sorttype},
+						url:"https://list.mogujie.com/search",
+						success:function(data){
+							console.log(data);
+							
+							console.log('miniWallkey22='+miniWallkey);
+	
+							//productContent
+							var productBoxData=data.result.wall.list;
+							for(var i=0;i<productBoxData.length;i++){
+								$li=$('<li><div class="productContentImg"><a href="'+productBoxData[i]["clientUrl"]+'"><img src="'
+								+productBoxData[i]["show"]["img"]+'" alt="" /></a></div><h4>'
+								+productBoxData[i]["title"]+'</h4><div class="productContenBto"><p>'
+								+productBoxData[i]["price"]+'</p><p>'+productBoxData[i]["cfav"]+'</p></div><div class="sale"> 已售'+productBoxData[i]["sale"]+'件</div></li>')
+								$('.productContentList').append($li);
+							}
+							
+							
+							
+							//productContentNav
+							var productContentNavData=data.result.filter.list;
+							for(var i=0;i<productContentNavData.length;i++){
+								$li=$('<a fcid="'+productContentNavData[i]["fcid"]+'" sort="'+productContentNavData[i]["sort"]+'" href="###"><span>'+productContentNavData[i]["title"]+'</span></a>');
+								$('.productContentNav').append($li);
+							}
+									
+						}
+								
+								
+					});
+				}
+				
+				
+				showProductContent(miniWallkey,page);
+				window.addEventListener("scroll",function(){
+			    
+			        var s = document.body.scrollTop || document.documentElement.scrollTop;//被隐藏的高度
+			        if(s>4000*page) {
+			        	
+			        	page++;
+			            showProductContent(miniWallkey,page,sorttype);
+			        } 
+			    });
+			    
+				
+			}
+			
+			
+			 
+				
+			
+			
+			
+			//https://list.mogujie.com/search?cKey=h5-cube&fcid=10062603&page=1&_version=1&pid=&q=&cpc_offset=0&_=1498010363605&callback=jsonp3
+			//https://list.mogujie.com/search?cKey=h5-cube&fcid=10062603&page=1&_version=1&pid=&q=&cpc_offset=0&sort=sell&_=1498025890270&callback=jsonp4
+		
+
+			
+			
+			
+	</script>
+	
+	
+	
+	
+	<script type="text/javascript">
+		$(function(){
+			$(".footerList li").click(function(){
+				
+				
+				if($(this).find('span').html()=="购物车"||$(this).find('span').html()=="我的"){
+					if(getCookie("username")==null){
+						window.location.href='login.html';
+					}
+					if($(this).find('span').html()=="我的"&&getCookie("username")!=null){
+						window.location.href='myHome.html';
+					}
+				}
+				
+				
+			});
+		});
+	</script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</html>

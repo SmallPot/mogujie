@@ -1,0 +1,137 @@
+input::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #eeeded;
+}
+input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #eeeded;
+}
+input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #eeeded;
+}
+input:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #eeeded;
+}
+body {
+  background-color: #fff;
+}
+/*headerLogin start*/
+.headerLogin {
+  width: 15rem;
+  height: 1.76rem;
+  background-color: #fff;
+  position: relative;
+  border-bottom: 0.02rem solid #c9c7c8;
+}
+.headerLogin a:nth-child(1) {
+  display: block;
+  float: left;
+  width: 1.76rem;
+  height: 1.76rem;
+  background: url(../img/left.png) no-repeat 0.4rem 0.4rem;
+  background-size: 0.96rem;
+}
+.headerLogin span:nth-child(2) {
+  display: block;
+  float: left;
+  width: 11.4rem;
+  height: 1.76rem;
+  line-height: 1.76rem;
+  text-align: center;
+  font-size: 0.72rem;
+  color: #5e5e5e;
+  font-weight: 800;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.headerLogin a:nth-child(3) {
+  width: 2.8rem;
+  height: 1.76rem;
+  line-height: 1.76rem;
+  text-align: center;
+  font-size: 0.64rem;
+  color: #727272;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+/*headerLogin end*/
+/*loginBox start*/
+.loginBox {
+  width: 13.8rem;
+  margin: 2rem auto 0 auto;
+}
+.loginBox span {
+  display: block;
+  font-size: 0.56rem;
+  text-align: center;
+  line-height: 0.56rem;
+  color: #666;
+  margin-bottom: 0.6rem;
+}
+.loginBox input {
+  margin-bottom: 0.98rem;
+  height: 1.26rem;
+  line-height: 1.26rem;
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 0.96rem;
+  border: none;
+  border-bottom: 0.02rem solid #ededed;
+  color: #333;
+  background: #fff;
+  outline: none;
+}
+.loginBox input:focus {
+  color: #eeeded;
+}
+.loginBtn {
+  width: 13.8rem;
+  font-size: 0.72rem;
+  height: 2rem;
+  line-height: 2rem;
+  display: inline-block;
+  background: #ff1877;
+  color: #fff;
+  border: none;
+  border-radius: 0.12rem;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.loginMore {
+  width: 13.8rem;
+  height: 1rem;
+  margin: 0.8rem auto 0 auto;
+}
+.loginMore a:nth-child(1) {
+  display: block;
+  float: left;
+  color: #999;
+  font-size: 0.56rem;
+}
+.loginMore a:nth-child(2) {
+  display: block;
+  float: right;
+  color: #ff5777;
+  font-size: 0.56rem;
+}
+.qqLogin {
+  width: 4.2rem;
+  height: 4.2rem;
+  margin: 2rem auto 0 auto;
+  cursor: pointer;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.qqLogin {
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+}
+/*loginBox end*/

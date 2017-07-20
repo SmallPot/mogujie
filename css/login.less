@@ -1,0 +1,157 @@
+@rem:50rem;
+@baseWidth:15rem;
+
+
+input::-webkit-input-placeholder { /* WebKit browsers */  
+  color: #eeeded;  
+}  
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */  
+  color: #eeeded;  
+}  
+input::-moz-placeholder { /* Mozilla Firefox 19+ */  
+  color: #eeeded;  
+}  
+input:-ms-input-placeholder { /* Internet Explorer 10+ */  
+  color: #eeeded;  
+}  
+
+body{
+    background-color: #fff;
+}
+ 
+/*headerLogin start*/
+.headerLogin{
+    width: @baseWidth;
+    height: 88/@rem;
+    background-color: #fff; 
+    position: relative;
+    border-bottom: 1/@rem solid #c9c7c8;
+}
+.headerLogin a:nth-child(1){
+    display: block;
+    float: left;
+    width: 88/@rem;
+    height: 88/@rem;
+    background: url(../img/left.png) no-repeat 20/@rem 20/@rem;
+    background-size: 48/@rem;
+}
+
+.headerLogin span:nth-child(2){
+    display: block;
+    float: left;
+    width: 285*2/@rem;
+    height: 88/@rem;
+    line-height: 88/@rem;
+    text-align: center;
+    font-size: 36/@rem;
+    color: #5e5e5e;
+    font-weight: 800;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.headerLogin a:nth-child(3){
+    width: 140/@rem;
+    height: 88/@rem;
+    line-height: 88/@rem;
+    text-align: center;
+    font-size: 32/@rem;
+    color: #727272;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/*headerLogin end*/
+
+/*loginBox start*/
+.loginBox{
+    width: 690/@rem;
+    margin: 100/@rem auto 0 auto;
+}
+
+.loginBox span{
+    display: block;
+    font-size: 28/@rem;
+    text-align: center;
+    line-height: 28/@rem;
+    color: #666;
+    margin-bottom: 30/@rem;
+}
+
+.loginBox input{
+    margin-bottom: 49/@rem;
+    height: 63/@rem;
+    line-height: 63/@rem;
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 48/@rem;
+    border: none;
+    border-bottom: 1/@rem solid #ededed;
+    color: #333;
+    background: #fff;
+    outline: none;
+}
+.loginBox input:focus{
+    color: #eeeded; 
+}
+
+.loginBtn{
+    width: 690/@rem;
+    font-size: 36/@rem;
+    height: 100/@rem;
+    line-height: 100/@rem;
+    display: inline-block;
+    background: #ff1877;
+    color: #fff;
+    border: none;
+    border-radius: 6/@rem;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+
+.loginMore{
+    width: 690/@rem;
+    height: 50/@rem;
+    margin: 40/@rem auto 0 auto;
+}
+
+.loginMore a:nth-child(1){
+    display: block;
+    float: left;
+    color: #999;
+    font-size: 28/@rem;
+}
+
+.loginMore a:nth-child(2){
+    display: block;
+    float: right;
+    color: #ff5777;
+    font-size: 28/@rem;
+}
+
+.qqLogin {
+    width: 210/@rem;
+    height: 210/@rem;  
+    margin: 100/@rem auto 0 auto;
+    cursor: pointer;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.qqLogin{
+    width: 210/@rem;
+    height: 210/@rem; 
+    border-radius: 50%;
+    
+}
+
+
+
+
+
+/*loginBox end*/

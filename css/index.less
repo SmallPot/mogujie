@@ -1,0 +1,489 @@
+@rem:50rem;
+@baseWidth:15rem;
+ 
+
+/*banner end*/
+
+.banner{
+    width: @baseWidth;
+    height: 300/@rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner ul{
+    width: 15000/@rem;
+    height: 300/@rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.banner ul li{
+    float: left;
+    width: @baseWidth;
+    height: 300/@rem;
+}
+
+
+.banner img{
+    width: @baseWidth;
+    height: 300/@rem;
+}
+
+
+/*用于获取更加体验*/
+.focus span {
+  width: 0.3rem;
+  height: 0.3rem;
+  margin-right: 0.3rem;
+  border-radius: 50%;
+  background: #666;
+  font-size: 0;
+  background-color: #fff;
+}
+.focus span.current {
+  background: red;
+}
+/*banner end*/
+
+/*goodsShow start*/
+
+.goodsShow{
+    width: @baseWidth;
+    height: 206/@rem;
+    background-color: #fff;
+    padding-top: 20/@rem;
+}
+
+.goodsShow ul{
+    padding: 20/@rem 0 0 0;
+}
+
+.goodsShow ul li{
+    float: left;
+    width: 250/@rem;
+    height: 166/@rem;
+    text-align: center;
+    -background-color: red;
+    border-right: 1px solid #eee;
+    box-sizing: border-box;
+}
+
+.goodsShow ul li:nth-child(3){
+    border-right: none;
+}
+.goodsShow ul li a{
+    display: block;
+    color: #ff6801;
+    font-size: 28/@rem;
+}
+
+.goodsShow ul li span{
+    display: block;
+    color: #666;
+    font-size: 24/@rem;
+}
+
+.goodsShow ul li img{
+    width: 100/@rem;
+    height: 100/@rem;
+    margin: 5/@rem auto 0 auto;
+}
+
+
+/*goodsShow end*/
+
+/*lazyData start*/
+
+.lazyData{
+    width: @baseWidth;
+    height: 186*2/@rem;
+    background-color: #fff;
+    margin-top: 20/@rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.lazyDataTop{
+    width: @baseWidth;
+    height: 64/@rem;
+    padding:30/@rem 0 0 0 ;
+}
+
+.lazyDataTop p{
+    float: left;
+    font-size: 30/@rem;
+    margin-left: 30/@rem;
+}
+
+.lazyDataTop time{
+    float: left;
+    display: block;
+    margin-left: 20/@rem;
+    
+}
+
+.lazyDataTop time span{
+    display: block;
+    float: left;
+    width: 40/@rem;
+    height: 40/@rem;
+    line-height: 40/@rem;
+    font-size: 28/@rem;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    border-radius: 8/@rem;
+}
+
+.lazyDataTop time i{
+    display: block;
+    float: left;
+    width: 20/@rem;
+    height: 40/@rem;
+    line-height: 40/@rem;
+    font-size: 28/@rem;
+    text-align: center;
+    color: #000;
+    font-style: normal;
+}
+
+.lazyDataTop a{
+    display: block;
+    width:105/@rem;
+    height: 25/@rem;
+    margin:10/@rem 30/@rem 0 0;
+    float: right;
+}
+
+
+.lazyDataList{
+    width: 2000/@rem;
+    padding-left: 20/@rem;
+    position: absolute;
+    left: 0;
+    top: 84/@rem;
+}
+
+.lazyDataList li{
+    float: left;
+    width: 180/@rem;
+    height: 250/@rem;
+    -background-color: red;
+    margin-right: 20/@rem;
+    text-align: center;
+}
+
+.lazyDataList li img{
+    width: 150/@rem;
+    height: 150/@rem;
+    margin: 0 auto;
+}
+
+.lazyDataList li p{
+    color: #666;
+    font-size: 24/@rem;
+    margin: 15/@rem 0 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.lazyDataList li p:nth-child(3){
+    color: #F25;
+    text-align: left;
+}
+
+.origin{
+    color: #888;
+    text-align: right;
+    margin-left: 5/@rem;
+    text-decoration: line-through;
+}
+
+/*lazyData end*/
+
+
+/*salesPromotion start*/
+
+.salesPromotion{
+    width: @baseWidth;
+    height: 328*2/@rem;
+    background-color: #fff;
+    margin: 20/@rem 0 0 0;
+}
+
+.salesPromotion h2{
+    height: 80/@rem;
+    line-height: 80/@rem;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    background: #fff;
+    color: #333;
+    text-indent: 20/@rem;
+    font-size: 28/@rem;
+    font-weight: normal;
+}
+
+.salesPromotionBox{
+    background-color:#fff ;
+}
+
+.salesPromotionBox li{
+    float: left;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.salesPromotionBox li h3{
+    font-size: 28/@rem;
+    color: #333;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.salesPromotionBox li p{
+    font-size: 24/@rem;
+    line-height: 33/@rem;
+    color: #ff5f7e;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.salesPromotionBox li img{
+    width: 79*2/@rem;
+    height: 79*2/@rem;
+    margin: 0 auto;
+}
+
+.salesPromotionBox li:nth-child(1){
+    width: 187.5*2/@rem;
+    height: 159.5*2/@rem;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding-top: 30/@rem;
+   
+}
+
+#salesPromotionImg img{
+    width: 200/@rem;
+    height: 196/@rem;
+    margin: 0 auto;
+}
+
+.salesPromotionBox li:nth-child(2){
+    width: 187.5*2/@rem;
+    height: 160/@rem;
+    border-bottom: 1px solid #eee;
+    overflow: hidden;
+}
+
+.salesPromotionText{
+    float: left;
+    width: 50%;
+    height: 160/@rem;
+    text-align: left;
+    padding: 40/@rem 0 0 20/@rem;
+    box-sizing: border-box;
+}
+
+.salesPromotionImg2{
+    float: left;
+    width: 79*2/@rem;
+    height: 79*2/@rem;
+}
+
+
+.salesPromotionBox li:nth-child(3){
+    width: 187.5*2/@rem;
+    height: 160/@rem;
+    border-bottom: 1px solid #eee;
+}
+
+.salesPromotionBox li:nth-child(4),.salesPromotionBox li:nth-child(5){
+    width: 250/@rem;
+    height: 128*2/@rem;
+    padding: 20/@rem 0 0 0;
+    border-right: 1px solid #eee;
+}
+
+
+.salesPromotionBox li:nth-child(6){
+    width: 250/@rem;
+    height: 128*2/@rem;
+    padding: 20/@rem 0 0 0;
+}
+
+
+/*salesPromotion end*/
+
+
+
+
+/*hotProduct start*/
+
+.hotProduct{
+    width: @baseWidth;
+    height: 424*2/@rem;
+    background-color: #fff;
+    margin: 20/@rem 0 0 0;
+    padding-top: 10/@rem;
+}
+
+
+.hotProduct h3{
+    width: 600/@rem;
+    height: 80/@rem;
+    line-height: 80/@rem;
+    text-align: center;
+    background: url(../img/title.png) no-repeat 150/@rem 36/@rem;
+    margin: 0 auto;
+    font-size: 30/@rem;
+    background-size: 50% auto;
+    color: #333;
+    font-weight: 400;
+}
+
+.hotProductList li{
+    float: left;
+    width: 93*2/@rem;
+    height: 83*2/@rem;
+    margin-top: 20/@rem;
+}
+
+.hotProductList li img{
+    width: 120/@rem;
+    height: 120/@rem;
+    margin: 0 auto 0 auto;
+}
+
+.hotProductList li span{
+    display: block;
+    font-size: 26/@rem;
+    color: #333;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 5/@rem;
+}
+
+
+
+
+/*hotProduct end*/
+
+
+/*suspectLike staret*/
+.suspectLike{
+    width: 750/@rem;
+    height: auto;
+    margin-top: 25/@rem;
+    
+}
+
+.suspectLike h3{
+    width: 600/@rem;
+    height: 80/@rem;
+    line-height: 80/@rem;
+    text-align: center;
+    background: url(../img/title.png) no-repeat 150/@rem 36/@rem;
+    margin: 0 auto;
+    font-size: 30/@rem;
+    background-size: 50% auto;
+    color: #333;
+    font-weight: 400;
+}
+
+.suspectLikeList{
+    
+}
+
+.suspectLikeList li{
+    float: left;
+    width: 176*2/@rem;
+    height: 310*2/@rem;
+    background-color: #fff;
+    
+    margin:15/@rem 0 0 15/@rem;
+}
+
+.suspectLikeList img{
+    width: 176*2/@rem;
+    height: 235*2/@rem;
+}
+
+.name_tags {
+    margin-top: 10/@rem;
+    height:80/@rem;
+    overflow: hidden;
+    padding-left: 10/@rem;
+}
+
+.name_tags span{
+    float: left;
+    height: 36/@rem;
+    line-height: 36/@rem;
+    padding: 0 6/@rem;
+    margin: 0 0 6/@rem 6/@rem;
+    font-size: 22/@rem;
+    background: #eff3f6;
+    color: #5a6f7a;
+}
+
+.suspecBottom p:nth-child(1){
+    float: left;
+    margin: 10/@rem 0 0 15/@rem;
+    font-size: 30/@rem;
+    font-weight: 700;
+    color: #333;
+    overflow: hidden;
+    
+}
+
+.suspecBottom p:nth-child(2){
+    float:right;
+    height: 28/@rem;
+    line-height: 30/@rem;
+    margin: 15/@rem 15/@rem 0 0;
+    padding-right: 30/@rem;
+    background: url(../img/sp2.png) center right no-repeat;
+    background-size: auto 24/@rem;
+    font-size: 24/@rem;
+    color: #999;
+    overflow: hidden;
+    
+}
+
+/*suspectLike end*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

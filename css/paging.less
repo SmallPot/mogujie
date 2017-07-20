@@ -1,0 +1,266 @@
+@rem:50rem;
+@baseWidth:15rem;
+
+
+/*header start*/
+.header{
+    position: fixed;
+    border-bottom: 5/@rem solid #eee;
+    z-index: 9999;
+}
+
+body{
+    background-color: #fff;
+}
+
+/*header end*/
+
+/*menu start*/
+.menu{
+    width: 180/@rem;
+    height: 572*2/@rem;
+    position: fixed;
+    left: 0;
+    top: 95/@rem;
+    background-color: #F6F6F6;
+    overflow: hidden;
+}
+
+.menu ul {
+    width: 180/@rem;
+    height: 572*2/@rem;
+    overflow: auto;
+}
+
+.menu ul li{
+    width: 180/@rem;
+    height: 90/@rem;
+    line-height: 90/@rem;
+    text-align: center;
+    font-size: 28/@rem;
+    color: #666;
+}
+
+.menu ul li.menuActive2{
+    color: #FF5577;
+    background-color: #fff;
+}
+
+.menuActive:before{
+    content: "";
+    display: block;
+    float: left;
+    width: 10/@rem;
+    height: 30/@rem;
+    margin-top: 28/@rem;
+    background-color: #FF5577;
+    color: #FF5577;
+}
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  
+.menu ul::-webkit-scrollbar{  
+    width: 6/@rem;  
+    background-color: #F6F6F6;  
+    display: none;
+}  
+  
+/*定义滚动条轨道 内阴影+圆角*/  
+.menu ul::-webkit-scrollbar-track{  
+    border-radius: 10px;  
+    background-color: #F6F6F6;  
+}  
+  
+/*定义滑块 内阴影+圆角*/  
+.menu ul::-webkit-scrollbar-thumb{  
+    border-radius: 10px;  
+    background-color: #c5c5c5;  
+} 
+
+
+/*menu end*/
+
+
+
+
+/*content start*/
+
+.content{
+    width: 285*2/@rem;
+    height: auto;
+    background-color: #fff;
+    padding: 150/@rem 0 0 200/@rem;
+}
+
+
+/*productBox start*/
+
+.productBox ul li{
+    float: left;
+    width: 88*2/@rem;
+    height: 95*2/@rem;
+    margin:5/@rem 6/@rem 5/@rem 0;
+}
+
+.productBox ul li img{
+    width: 130/@rem;
+    height: 130/@rem;
+    margin: 0 auto;
+}
+
+.productBox ul li span{
+    display: block;
+    font-size: 24/@rem;
+    color: #666666;
+    text-align: center;
+    line-height: 38/@rem;
+    margin: 10/@rem auto 0 auto;
+}
+
+
+/*productBox end*/
+
+
+
+/*productContent start*/
+
+.productContent{
+    clear: both;
+    margin-top: 30/@rem;
+}
+
+.productContentNav{
+    border-top: 1/@rem solid #eee;
+     border-bottom: 1/@rem solid #eee;
+     height: 78/@rem;
+     background-color: #fff;
+     z-index: 99999;
+     overflow: hidden;
+}
+
+.productContentNav  a{
+    float: left;
+    display: block;
+    width: 91*2/@rem;
+    text-align: center;
+    font-size: 28/@rem;
+    height: 78/@rem;
+}
+
+.productContentNav span{
+    display: block;
+    width: 91*2/@rem;
+    border-left: 1/@rem solid #e6e6e6;
+    box-sizing: border-box;
+    margin-top: 20/@rem;
+    color: #666;
+}
+
+
+
+.productContentList{ 
+
+
+}
+
+.productContentList li{ 
+    float: left;
+    width: 266/@rem;
+    height: 440/@rem;
+    background-color: #fff;
+    margin:10/@rem  8/@rem 0 0;
+    position: relative;
+}
+
+.productContentImg img{
+    width: 266/@rem;
+    height: 172*2/@rem;
+    margin: 0 auto;
+}
+
+
+.productContentList li h4{
+    line-height: 34/@rem;
+    max-height: 67/@rem;
+    font-size: 24/@rem;
+    color: #333;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 10/@rem;
+} 
+
+
+
+.productContenBto P:nth-child(1){ 
+
+    float: left;
+    margin: 0.2rem 0 0 0.3rem;
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: #333;
+    overflow: hidden;
+    color: #FF5777;
+
+}
+
+
+.productContenBto P:nth-child(2){ 
+
+    float: right;
+    height: 0.56rem;
+    line-height: 0.6rem;
+    margin: 0.3rem 0.3rem 0 0;
+    padding-right: 0.6rem;
+    background: url(../img/sp2.png) center right no-repeat;
+    background-size: auto 0.48rem;
+    font-size: 0.48rem;
+    color: #999;
+    overflow: hidden;
+}
+
+
+.sale {
+    width: 77*2/@rem;
+    height: 50/@rem;
+    line-height: 50/@rem;
+    background: url(../img/bg.png) no-repeat;
+    position: absolute;
+    font-size: 24/@rem;
+    color: #fff;
+    padding:0 0 0 20/@rem ;
+    left: 0;
+    bottom: 110/@rem;
+}
+
+
+
+
+
+
+
+
+
+/*productContent end*/
+
+
+/*content end*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

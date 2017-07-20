@@ -1,0 +1,149 @@
+body {
+  background-color: #eee;
+}
+/* userBox start*/
+.userBox {
+  width: 15rem;
+  height: 3.6rem;
+  background-color: #fff;
+}
+.userImg {
+  width: 1.8rem;
+  height: 1.8rem;
+  float: left;
+  margin: 0.86rem 0 0 0.8rem;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.userImg img {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+.userInfo {
+  overflow: hidden;
+}
+.userInfo h5 {
+  color: #333;
+  font-size: 0.72rem;
+  font-weight: 400;
+  margin: 0.86rem 0 0 0.6rem;
+}
+.userInfo p {
+  color: #333;
+  font-size: 0.48rem;
+  font-weight: 400;
+  padding-right: 0.4rem;
+  margin: 0.2rem 0 0 0.6rem;
+  background: url(../img/right.png) no-repeat 3.04rem 0.16rem;
+  background-size: 0.24rem 0.46rem;
+}
+/* userBox end*/
+/*MyOrder start*/
+.MyOrder {
+  width: 15rem;
+  height: 4.56rem;
+  background-color: #fff;
+  margin-top: 0.4rem;
+}
+.MyOrderTop {
+  height: 2rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+.MyOrderTop a {
+  display: block;
+  float: left;
+  margin: 0.4rem 0 0 0.5rem;
+}
+.MyOrderTop img {
+  width: 1.12rem;
+  height: 1.12rem;
+}
+.MyOrderTop span {
+  display: block;
+  float: left;
+  font-size: 0.64rem;
+  color: #333;
+  white-space: nowrap;
+  margin: 0.6rem 0 0 0.7rem;
+}
+.MyOrderTop i {
+  display: block;
+  float: right;
+  width: 1.12rem;
+  height: 1.12rem;
+  background: url(../img/right.png) no-repeat 0 0.24rem;
+  background-size: 0.24rem 0.46rem;
+  margin: 0.6rem 0 0 0;
+}
+.MyOrderNav {
+  width: 15rem;
+}
+.MyOrderNav li {
+  float: left;
+  width: 3.72rem;
+  height: 2.56rem;
+  text-align: center;
+}
+.MyOrderNav li img {
+  width: 0.76rem;
+  height: 0.66rem;
+  margin: 0.4rem auto 0 auto;
+}
+.MyOrderNav li span {
+  font-size: 0.56rem;
+  color: #333;
+}
+/*MyOrder end*/
+/*own start*/
+.own {
+  width: 15rem;
+  margin-top: 0.4rem;
+}
+.own ul li {
+  background-color: #fff;
+  overflow: hidden;
+}
+.own ul li a {
+  display: block;
+  float: left;
+  width: 2.4rem;
+  height: 2rem;
+}
+.own ul li img {
+  width: 1.12rem;
+  height: 1.12rem;
+  margin: 0.44rem 0 0 0.5rem;
+}
+.own ul li span {
+  display: block;
+  float: left;
+  width: 12.6rem;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 0.64rem;
+  background: url(../img/right.png) no-repeat 11.4rem 0.8rem;
+  background-size: 0.24rem 0.46rem;
+  border-bottom: 0.02rem solid #e5e5e5;
+}
+.dowload {
+  width: 15rem;
+  height: 2.6rem;
+  margin-bottom: 0.4rem;
+}
+.dowload img {
+  width: 15rem;
+  height: 2.6rem;
+}
+.logout {
+  width: 13.2rem;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  margin: 0.6rem auto 3.4rem 0.9rem;
+  color: #fff;
+  background-color: #ff5777;
+  text-align: center;
+  font-size: 0.6rem;
+  border: none;
+  border-radius: 0.16rem;
+}
+/*own end*/

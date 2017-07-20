@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!--视口宽度为设备宽度，不能缩放-->
+		<meta name="viewport" content="width=device-width,user-scalable=no">
+		<!--qq浏览器下强制横盘或者竖屏显示-->
+		<meta name="x5-orientation" content="portrait" />
+		<!--qq浏览器下是否可以全屏-->
+		<meta name="x5-fullscreen" content="true" />
+		<!--UC浏览器下强制横盘或者竖屏显示-->
+		<meta name="screen-orientation" content="portrait">
+		<!--UC浏览器下是否可以全屏-->
+		<meta name="full-screen" content="yes">
+		<!--是否禁止识别手机和邮箱-->
+		<meta name="format-detection" content="telephone=yes, email=no" />
+		<script src="js/Cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-1.6.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/myJS.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="icon" href="img/logo.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/myHome.css"/>
+		
+		<title>个人中心</title>
+		<script>
+		    (function(){
+		    	var html = document.documentElement;
+		    	var hWidth = html.getBoundingClientRect().width;
+				html.style.fontSize = hWidth/15 + "px";
+		    })()
+		</script>
+	</head>
+	<body>
+	
+	
+	<!--userBox start-->
+	<header class="userBox">
+		<div class="userImg"><img src="img/userImg.jpg" alt="" /></div>
+		<div class="userInfo">
+			<h5>&nbsp;&nbsp;</h5>
+			<p>我的收货地址</p>
+		</div>
+	</header>
+	<!--userBox end-->
+	
+	
+	
+	<!--MyOrder start-->
+	<section class="MyOrder">
+		<div class="MyOrderTop clearfix">
+			<a href="###"><img src="img/order.png" alt="" /></a>
+			<span>我的订单</span>
+			<i></i>
+		</div>
+		
+		<ul class="MyOrderNav">
+			<li>
+				<a href="###"><img src="img/DaiFuKuang.png"/></a>
+				<span>代付款</span>
+			</li>
+			<li>
+				<a href="###"><img src="img/d2.png"/></a>
+				<span>待收货</span>
+			</li>
+			<li>
+				<a href="###"><img src="img/d3.png"/></a>
+				<span>待评价</span>
+			</li>
+			<li>
+				<a href="###"><img src="img/d4.png"/></a>
+				<span>售后</span>
+			</li>
+		</ul>
+		
+	</section>
+	<!--MyOrder end-->
+	
+	
+	<!--own start-->
+	
+	<section class="own">
+		<ul class="clearfix">
+			<li>
+				<a href="###"><img src="img/t1.png" alt="" /></a>
+				<span>我的购物车</span>
+			</li>
+			<li>
+				<a href="###"><img src="img/t2.png" alt="" /></a>
+				<span>我的拼团</span>
+			</li>
+			<li>
+				<a href="###"><img src="img/t3.png" alt="" /></a>
+				<span>我的优惠券</span>
+			</li>
+			<li>
+				<a href="###"><img src="img/t4.png" alt="" /></a>
+				<span>我收藏的商品</span>
+			</li>
+			<li>
+				<a href="###"><img src="img/t5.png" alt="" /></a>
+				<span>我收藏的店铺</span>
+			</li>
+			<div class="dowload"><img src="img/dowload.png"/></div>
+			<li>
+				<a href="###"><img src="img/t6.png" alt="" /></a>
+				<span>消息通知</span>
+			</li>
+			<li>
+				<a href="###"><img src="img/t7.png" alt="" /></a>
+				<span>客服</span>
+			</li>
+			<li>
+				<a href="###"><img src="img/t8.png" alt="" /></a>
+				<span>意见反馈</span>
+			</li>
+		</ul>
+		
+		
+		<button class="logout">退出</button>
+		
+		
+	</section>
+	
+	<!--own end-->
+	
+	
+	
+	<!--footer start-->
+		<section class="footer">
+			<ul class="footerList clearfix">
+				<li>
+					<a href="index.html"><img src="img/home.png"/></a>
+					<span class="footerListActive">首页</span>
+				</li>
+				<li>
+					<a href="paging.html"><img src="img/fenlei.png"/></a>
+					<span>分类</span>
+				</li>
+				<li>
+					<a href="###"><img src="img/gouwuche.png"/></a>
+					<span>购物车</span>
+				</li>
+				<li>
+					<a href="myHome.html"><img src="img/my.png"/></a>
+					<span>我的</span>
+				</li>
+			</ul>
+		</section>
+		<!--footer end-->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</body>
+	
+	
+	<script type="text/javascript">
+		$(function(){
+			
+			
+			$(".userInfo h5").html(getCookie('username'));
+			
+			
+			
+			
+			$(".logout").click(function(){
+				
+				$.ajax({
+					type:"get",
+					async:true,
+					dataType:'text',
+					data:{"m":"index","a":"logout"},
+					url:"index.php",
+					success:function(str){
+						
+						str=JSON.parse(str);
+						console.log(str)
+						window.location.href='index.html';
+						
+					}
+				});
+			});
+		});
+	</script>
+</html>
